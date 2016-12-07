@@ -1,0 +1,39 @@
+{
+  "name": "webpack-rails",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev_server": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
+    "build": "webpack --config=config/webpack.config.js -p",
+    "webpack:deploy": "npm run build",
+    "heroku-postbuild": "npm run webpack:deploy"
+  },
+  "dependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "dropzone": "^4.3.0",
+    "image-webpack-loader": "^2.0.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-dropzone": "^3.6.0",
+    "react-overlay": "^0.1.7",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "react-router-redux": "^4.0.5",
+    "react-select": "^0.9.1",
+    "redux": "^3.5.2",
+    "redux-auth-wrapper": "^0.8.0",
+    "redux-thunk": "^2.1.0",
+    "stats-webpack-plugin": "^0.2.1",
+    "superagent": "^2.3.0",
+    "superagent-rails-csrf": "0.0.2",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "1.7.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.9.0"
+  }
+}

@@ -1,0 +1,41 @@
+import React from 'react';
+import DropZone from 'react-dropzone';
+import request from 'superagent';
+require('superagent-rails-csrf')(request);
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.addImage = this.addImage.bind(this);
+  }
+
+  addImage(files) {
+    let file = files[0];
+    let req = request.put('/my_route');
+    req.setCsrfToken();
+    req.attach('whateverIWantTheParamToBe', file);
+    req.end( (err, res) => {
+      if (err) {
+        //Notify user of error
+      } else {
+        //set state from json object
+      }
+    });
+  }
+
+  render() {
+    return (
+      <DropZone
+        onDrop={this.addImage}
+        accept='image/*'
+      >
+        <div>
+          <span> Drop image or click to uplaod </span>
+        </div>
+      </DropZone>
+    )
+  }
+}
+
+export default MyComponent```
+

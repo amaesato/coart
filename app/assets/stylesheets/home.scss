@@ -1,0 +1,23 @@
+
+
+// #main {
+//   overflow:auto;
+//   padding-bottom:150px; /* this needs to be bigger than footer height*/
+// }
+
+.top-align {
+  vertical-align: top;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+.navbar-bottom {
+  border-bottom: 25px solid #282828;
+  padding-bottom: 10px;
+}
+
+.no-margin {
+  margin: 0px;
+}
